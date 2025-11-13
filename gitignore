@@ -1,0 +1,9 @@
+# Python sistem dosyaları
+__pycache__/
+*.pyc
+
+# Oluşturulan Çıktılar (Bunlar kod çalışınca oluşur, depoya eklenmez)
+son_rapor.txt
+
+# Yerel Veri Setleri (ÇOK ÖNEMLİ - ASLA GitHub'a yüklenmemeli)
+*.csv
