@@ -10,21 +10,21 @@ import matplotlib.dates as mdates
 
 # --- 0. RAPORLAMA (LOGGING) SİSTEMİNİ AYARLAMA ---
 
-# Rapor dosyasının adı senin istediğin gibi "son_rapor.txt" olarak kaldı.
+# Rapor dosyasının adı"son_rapor.txt" .
 log_dosyasi = "son_rapor.txt"
 
-# Eski logger'ları temizle (önceki çalışmalardan kalıntı olmasın)
+# Eski logger'ları temizleme
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
-# Yeni, "insan okuyacak" seviyede logger'ı ayarla
+# Yeni, "insan okuyacak" seviyede loggerlar
 logging.basicConfig(
     level=logging.INFO,
     format="%(message)s",  # Sadece mesajı bas
     encoding='utf-8',
     handlers=[
         logging.FileHandler(log_dosyasi, mode='w', encoding='utf-8'),
-        logging.StreamHandler(sys.stdout) # Ekrana da bas
+        logging.StreamHandler(sys.stdout) # Ekrana da basılacak
     ]
 )
 
@@ -37,9 +37,9 @@ try:
     # --- AŞAMA 1: VERİ YÜKLEME VE HAZIRLIK ---
     logging.info("--- AŞAMA 1: VERİ YÜKLEME VE TEMEL KONTROLLER ---")
 
-    # Dosya yolları senin belirttiğin gibi orijinal (hardcoded) haliyle bırakıldı.
-    basket_path = "C:\\Users\\Ayşegül Uçan\\Documents\\YZT\\yzt25takim\\basket_details.csv"
-    customer_path = "C:\\Users\\Ayşegül Uçan\\Documents\\YZT\\yzt25takim\\customer_details.csv"
+    # Dosya yolları 
+    basket_path = "basket_details.csv dosya yolu"
+    customer_path = "customer_details.csv dosya yolu"
     
     try:
         df_basket = pd.read_csv(basket_path)
